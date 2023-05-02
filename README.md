@@ -234,3 +234,7 @@ R, Srivignesh. “A Walk-through of Regression Analysis Using Artificial Neural 
 R, Srivignesh. “A Walk-through of Regression Analysis Using Artificial Neural Networks in Tensorflow.” Analytics Vidhya, March 27, 2021, [https://www.analyticsvidhya.com/blog/2020/03/support-vector-regression-tutorial-for-machine-learning/](https://www.analyticsvidhya.com/blog/2020/03/support-vector-regression-tutorial-for-machine-learning/).
 
 Versloot, Christian. “How To Perform Multioutput Regression With Svms In Python.” Feb 15, 2022, [https://github.com/christianversloot/machine-learning-articles/blob/main/how-to-perform-multioutput-regression-with-svms-in-python.m](https://github.com/christianversloot/machine-learning-articles/blob/main/how-to-perform-multioutput-regression-with-svms-in-python.m).
+
+Code template of project.py from CMPUT 466 
+
+Code template of coding assignment 1 from CMPUT 466

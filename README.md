@@ -61,25 +61,25 @@ I fixed alpha, then for each alpha in the set, I fix a $\lambda$ then get the te
 
 <figure align="center" display= "inline-block"
     margin= "20px">
-  <img  vertical-align= "top" width= "30%"  src="linear regression/l1/losses_train_l1_lr_0.01_lmd_0.0001.jpg" hspace="20"/>
+  <img  vertical-align= "top" width= "40%"  src="linear regression/l1/losses_train_l1_lr_0.01_lmd_0.0001.jpg" hspace="20"/>
   <figcaption text-align= "center">The learning curve of the validation MAE (alpha = 0.01, &lambda; = 0.0001)</figcaption>
   </figure>
   
 <figure align="center" display= "inline-block"
     margin= "20px">  
-    <img  vertical-align= "top" width= "30%"  src="linear regression/l1/valid_l1_lr_0.01_lmd_0.0001.jpg">
+    <img  vertical-align= "top" width= "40%"  src="linear regression/l1/valid_l1_lr_0.01_lmd_0.0001.jpg">
   <figcaption text-align= "center">The learning curve of the validation MAE (alpha = 0.01, &lambda; = 0.0001)</figcaption>
   </figure>
 
 <figure align="center" display= "inline-block"
     margin= "20px">
-  <img vertical-align= "top" width= "30%" src="linear regression/l1/losses_train_l1_lr_0.0001_lmd_0.1.jpg" hspace="10" />
+  <img vertical-align= "top" width= "40%" src="linear regression/l1/losses_train_l1_lr_0.0001_lmd_0.1.jpg" hspace="10" />
   <figcaption text-align= "center">The learning curve of the training MSE (alpha = 0.0001, &lambda; = 0.1)</figcaption>
   </figure>
   
   <figure align="center" display= "inline-block"
     margin= "20px">
-  <img vertical-align= "top" width= "30%" src="linear regression/l1/valid_l1_lr_0.0001_lmd_0.1.jpg">
+  <img vertical-align= "top" width= "40%" src="linear regression/l1/valid_l1_lr_0.0001_lmd_0.1.jpg">
   <figcaption text-align= "center">The learning curve of the validation MAE (alpha = 0.0001, &lambda; = 0.1)</figcaption>
 </figure>
 
@@ -87,25 +87,25 @@ I fixed alpha, then for each alpha in the set, I fix a $\lambda$ then get the te
 
 <figure align="center" display= "inline-block"
     margin= "20px">
-  <img vertical-align= "top" width= "30%" src="linear regression/l2/losses_train_l2_lr_0.001_lmd_0.1.jpg" hspace="10" />
+  <img vertical-align= "top" width= "40%" src="linear regression/l2/losses_train_l2_lr_0.001_lmd_0.1.jpg" hspace="10" />
   <figcaption text-align= "center">The learning curve of the validation MAE (alpha = 0.001, &lambda; = 0.1)</figcaption>
   </figure>
   
   <figure align="center" display= "inline-block"
     margin= "20px">
-  <img vertical-align= "top" width= "30%" src="linear regression/l2/valid_l2_lr_0.001_lmd_0.1.jpg">
+  <img vertical-align= "top" width= "40%" src="linear regression/l2/valid_l2_lr_0.001_lmd_0.1.jpg">
   <figcaption text-align= "center">The learning curve of the validation MAE (alpha = 0.001, &lambda; = 0.1)</figcaption>
 </figure>
 
 <figure align="center" display= "inline-block"
     margin= "20px">
-  <img vertical-align= "top" width= "30%" src="linear regression/l2/losses_train_l2_lr_0.1_lmd_0.jpg" hspace="10" />
+  <img vertical-align= "top" width= "40%" src="linear regression/l2/losses_train_l2_lr_0.1_lmd_0.jpg" hspace="10" />
   <figcaption text-align= "center">The learning curve of the training MSE (alpha = 0.1, &lambda; = 0)</figcaption>
   </figure>
   
   <figure align="center" display= "inline-block"
     margin= "20px">
-  <img vertical-align= "top" width= "30%" src="linear regression/l2/valid_l2_lr_0.1_lmd_0.jpg">
+  <img vertical-align= "top" width= "40%" src="linear regression/l2/valid_l2_lr_0.1_lmd_0.jpg">
   <figcaption text-align= "center">The learning curve of the validation MAE (alpha = 0.1, &lambda; = 0)</figcaption>
 </figure>
 
@@ -119,25 +119,25 @@ I experimented with a few initial learning rates. After experimenting with diffe
 
 <figure align="center" display= "inline-block"
     margin= "20px">
-  <img vertical-align= "top" width= "30%" src="linear regression/decay/losses_train_decay_lr_0.1.jpg" hspace="10" />
+  <img vertical-align= "top" width= "40%" src="linear regression/decay/losses_train_decay_lr_0.1.jpg" hspace="10" />
   <figcaption text-align= "center">The learning curve of the validation MAE (alpha = 0.1)</figcaption>
   </figure>
   
   <figure align="center" display= "inline-block"
     margin= "20px">
-  <img vertical-align= "top" width= "30%" src="linear regression/decay/valid_decay_lr_0.1.jpg">
+  <img vertical-align= "top" width= "40%" src="linear regression/decay/valid_decay_lr_0.1.jpg">
   <figcaption text-align= "center">The learning curve of the validation MAE (alpha = 0.1)</figcaption>
 </figure>
 
 <figure align="center" display= "inline-block"
     margin= "20px">
-  <img vertical-align= "top" width= "30%" src="linear regression/decay/losses_train_decay_lr_0.001.jpg" hspace="10" />
+  <img vertical-align= "top" width= "40%" src="linear regression/decay/losses_train_decay_lr_0.001.jpg" hspace="10" />
   <figcaption text-align= "center">The learning curve of the training MSE (alpha = 0.001)</figcaption>
   </figure>
   
   <figure align="center" display= "inline-block"
     margin= "20px">
-  <img vertical-align= "top" width= "30%" src="linear regression/decay/valid_decay_lr_0.001.jpg">
+  <img vertical-align= "top" width= "40%" src="linear regression/decay/valid_decay_lr_0.001.jpg">
   <figcaption text-align= "center">The learning curve of the validation MAE (alpha = 0.001)</figcaption>
 </figure>
 
@@ -153,25 +153,25 @@ After tuning I found the best model to have a dropout layer of 0.3 and a RMSProp
 - For an RMSProp optimizer (and He Uniform weight initializer kernel), I found the lowest test risk of 5.9898529052734375. Below are figures from RMSProp optimizer.
 <figure align="center" display= "inline-block"
     margin= "20px">
-  <img vertical-align= "top" width= "30%" src="nn/neural_network_train_adam_drop_0.3.jpg" hspace="10" />
+  <img vertical-align= "top" width= "40%" src="nn/neural_network_train_adam_drop_0.3.jpg" hspace="10" />
   <figcaption text-align= "center">The learning curve of the training MSE (Adam optimizer)</figcaption>
   </figure>
   
   <figure align="center" display= "inline-block"
     margin= "20px">
-  <img vertical-align= "top" width= "30%" src="nn/neural_network_val_adam_drop_0.3.jpg">
+  <img vertical-align= "top" width= "40%" src="nn/neural_network_val_adam_drop_0.3.jpg">
   <figcaption text-align= "center">The learning curve of the validation MAE (Adam optimizer)</figcaption>
 </figure>
 
 <figure align="center" display= "inline-block"
     margin= "20px">
-  <img vertical-align= "top" width= "30%" src="nn/neural_network_train_rms_drop_0.3.jpg" hspace="10" />
+  <img vertical-align= "top" width= "40%" src="nn/neural_network_train_rms_drop_0.3.jpg" hspace="10" />
   <figcaption text-align= "center">The learning curve of the training MSE (RMSProp optimizer)</figcaption>
   </figure>
   
   <figure align="center" display= "inline-block"
     margin= "20px">
-  <img vertical-align= "top" width= "30%" src="nn/neural_network_val_rms_0.3.jpg">
+  <img vertical-align= "top" width= "40%" src="nn/neural_network_val_rms_0.3.jpg">
   <figcaption text-align= "center">The learning curve of the validation MAE (RMSProp optimizer)</figcaption>
 </figure>
 
@@ -184,13 +184,13 @@ After tuning I found the best model to have a dropout layer of 0.3 and a RMSProp
 
 <figure align="center" display= "inline-block"
     margin= "20px">
-  <img vertical-align= "top" width= "30%" src="nn/neural_network_train_adam_drop_0.3.jpg" hspace="10" />
+  <img vertical-align= "top" width= "40%" src="nn/neural_network_train_adam_drop_0.3.jpg" hspace="10" />
   <figcaption text-align= "center">The learning curve of the training MSE (normal kernel)</figcaption>
   </figure>
   
   <figure align="center" display= "inline-block"
     margin= "20px">
-  <img vertical-align= "top" width= "30%" src="nn/neural_network_val_adam_drop_0.3.jpg">
+  <img vertical-align= "top" width= "40%" src="nn/neural_network_val_adam_drop_0.3.jpg">
   <figcaption text-align= "center">The learning curve of the validation MAE (normal kernel)</figcaption>
 </figure>
 
@@ -200,13 +200,13 @@ After tuning I found the best model to have a dropout layer of 0.3 and a RMSProp
 
 <figure align="center" display= "inline-block"
     margin= "20px">
-  <img vertical-align= "top" width= "30%" src="nn/neural_network_train_drop_0.6.jpg" hspace="10" />
+  <img vertical-align= "top" width= "40%" src="nn/neural_network_train_drop_0.6.jpg" hspace="10" />
   <figcaption text-align= "center">The learning curve of the training MSE (dropout 0.6)</figcaption>
   </figure>
 
   <figure align="center" display= "inline-block"
     margin= "20px">
-  <img vertical-align= "top" width= "30%" src="nn/neural_network_val_drop_0.6.jpg" hspace="10" />
+  <img vertical-align= "top" width= "40%" src="nn/neural_network_val_drop_0.6.jpg" hspace="10" />
   <figcaption text-align= "center">The learning curve of the validation MAE (dropout 0.6)</figcaption>
   </figure>
 

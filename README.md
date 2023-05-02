@@ -31,7 +31,7 @@ I fixed parameters at a batch size of 64, and 50 epochs. I use three densely con
 Another method I experimented with is SVM, as it works effectively in cases where we have easily separable classes and is generally more memory efficient. To adjust for multiple class output, I used MultiOutputRegressor from sklearn, which fits four regressors for each class.\
  I experimented with different kernels to determine the best fitting one.
 
-## Results
+## **Results**
 
 ### Linear Regression
 
@@ -44,112 +44,166 @@ I fixed alpha, then for each alpha in the set, I fix a $\lambda$ then get the te
 - For L1 regularization, I found a learning rate (alpha) of 0.0001 and a $\lambda$ of 0.1 to produce the lowest test risk of 7.775. Below are a few figures from L1 tuning.
 - For L2 regularization, I found a learning rate of 0.0001 and a $\lambda$ of 0 (no L2 term) to produce the lowest test risk of 7.654087. Below are a few figures from L2 tuning.
 
-![Picture]){ width="800" height="600" style="display: block; margin: 0 auto" }
+<figure align="center" display= "inline-block"
+    margin= "20px">
+  <img vertical-align= "top" width= "30%" src="linear regression/l1/losses_train_l1_lr_0.01_lmd_0.0001.jpg" hspace="10" />
+  <figcaption text-align= "center">The learning curve of the validation MAE (alpha = 0.01, &lambda; = 0.0001)</figcaption>
+  </figure>
+  
+  <figure align="center" display= "inline-block"
+    margin= "20px">
+  <img vertical-align= "top" width= "30%" src="linear regression/l1/valid_l1_lr_0.01_lmd_0.0001.jpg">
+  <figcaption text-align= "center">The learning curve of the validation MAE (alpha = 0.01, &lambda; = 0.0001)</figcaption>
+</figure>
 
-<div display="flex"
-  justify-content="center"> <!-- % changes space between pictures -->
-  <div><img
-  width= "50%" src="linear regression/l1/losses_train_l1_lr_0.01_lmd_0.0001.jpg" /></div>
-  <div><img 
-  width= "50%" src="linear regression/l1/losses_train_l1_lr_0.01_lmd_0.0001.jpg" /></div>
-</div>
+<figure align="center" display= "inline-block"
+    margin= "20px">
+  <img vertical-align= "top" width= "30%" src="linear regression/l1/losses_train_l1_lr_0.0001_lmd_0.1.jpg" hspace="10" />
+  <figcaption text-align= "center">The learning curve of the training MSE (alpha = 0.0001, &lambda; = 0.1)</figcaption>
+  </figure>
+  
+  <figure align="center" display= "inline-block"
+    margin= "20px">
+  <img vertical-align= "top" width= "30%" src="linear regression/l1/valid_l1_lr_0.0001_lmd_0.1.jpg">
+  <figcaption text-align= "center">The learning curve of the validation MAE (alpha = 0.0001, &lambda; = 0.1)</figcaption>
+</figure>
 
-\subfloat[\centering The learning curve of the training MSE (alpha = 0.01, $\lambda$ = 0.0001)]{{\includegraphics[width=3.5cm]{linear regression/l1/losses_train_l1_lr_0.01_lmd_0.0001.jpg} }}%
-\subfloat[\centering The learning curve of the validation MAE (alpha = 0.01, $\lambda$ = 0.0001)]{{\includegraphics[width=3.5cm]{linear regression/l1/valid_l1_lr_0.01_lmd_0.0001.jpg} }}%
-\qquad
-\subfloat[\centering The learning curve of the training MSE (alpha = 0.0001, $\lambda$ = 0.1)]{{\includegraphics[width=3.5cm]{linear regression/l1/losses_train_l1_lr_0.0001_lmd_0.1.jpg} }}%
-\subfloat[\centering The learning curve of the validation MAE (alpha = 0.0001, $\lambda$ = 0.1)]{{\includegraphics[width=3.5cm]{linear regression/l1/valid_l1_lr_0.0001_lmd_0.1.jpg} }}%
-\caption{Learning curve of training and validation for L1 Regularization}%
-\label{fig:example}%
-\end{figure}
+<b><p align="center">Learning curve of training and validation for L1 Regularization<p></b>
 
-\begin{figure}[H]%
-\centering
-\subfloat[\centering The learning curve of the training MSE (alpha = 0.001, $\lambda$ = 0.1)]{{\includegraphics[width=3.5cm]{linear regression/l2/losses_train_l2_lr_0.001_lmd_0.1.jpg} }}%
-\subfloat[\centering The learning curve of the validation risk (alpha = 0.001, $\lambda$ = 0.1)]{{\includegraphics[width=3.5cm]{linear regression/l2/valid_l2_lr_0.001_lmd_0.1.jpg} }}%
-\qquad
-\subfloat[\centering The learning curve of the training mean MSE (alpha = 0.1, $\lambda$ = 0)]{{\includegraphics[width=3.5cm]{linear regression/l2/losses_train_l2_lr_0.1_lmd_0.jpg} }}%
-\subfloat[\centering The learning curve of the validation MAE (alpha = 0.1, $\lambda$ = 0)]{{\includegraphics[width=3.5cm]{linear regression/l2/valid_l2_lr_0.1_lmd_0.jpg} }}%
-\caption{Learning curve of training and validation for L2 Regularization}%
-\label{fig:example}%
-\end{figure}
+<figure align="center" display= "inline-block"
+    margin= "20px">
+  <img vertical-align= "top" width= "30%" src="linear regression/l2/losses_train_l2_lr_0.001_lmd_0.1.jpg" hspace="10" />
+  <figcaption text-align= "center">The learning curve of the validation MAE (alpha = 0.001, &lambda; = 0.1)</figcaption>
+  </figure>
+  
+  <figure align="center" display= "inline-block"
+    margin= "20px">
+  <img vertical-align= "top" width= "30%" src="linear regression/l2/valid_l2_lr_0.001_lmd_0.1.jpg">
+  <figcaption text-align= "center">The learning curve of the validation MAE (alpha = 0.001, &lambda; = 0.1)</figcaption>
+</figure>
 
-\subsubsection\*{Step Decay}
+<figure align="center" display= "inline-block"
+    margin= "20px">
+  <img vertical-align= "top" width= "30%" src="linear regression/l2/losses_train_l2_lr_0.1_lmd_0.jpg" hspace="10" />
+  <figcaption text-align= "center">The learning curve of the training MSE (alpha = 0.1, &lambda; = 0)</figcaption>
+  </figure>
+  
+  <figure align="center" display= "inline-block"
+    margin= "20px">
+  <img vertical-align= "top" width= "30%" src="linear regression/l2/valid_l2_lr_0.1_lmd_0.jpg">
+  <figcaption text-align= "center">The learning curve of the validation MAE (alpha = 0.1, &lambda; = 0)</figcaption>
+</figure>
+
+<b><p align="center">Learning curve of training and validation for L1 Regularization<p></b>
+
+### Step Decay
 
 I experimented with a few initial learning rates. After experimenting with different factors, I decided on a factor of 0.5 every 10 epochs. Thus every 10 epochs, the learning rate decreases by half.
 
-\begin{enumerate}
-\item I found an initial learning rate (alpha) of 0.1 to produce the lowest test risk of 7.6947923. Below are a few figures from decay tuning.
-\end{enumerate}
-\begin{figure}[H]%
-\centering
-\subfloat[\centering The learning curve of the training MSE (alpha = 0.001, $\lambda$ = 0.1)]{{\includegraphics[width=3.5cm]{linear regression/l2/losses_train_l2_lr_0.001_lmd_0.1.jpg} }}%
-\subfloat[\centering The learning curve of the validation risk (alpha = 0.001, $\lambda$ = 0.1)]{{\includegraphics[width=3.5cm]{linear regression/l2/losses_train_l2_lr_0.001_lmd_0.1.jpg} }}%
-\qquad
-\subfloat[\centering The learning curve of the training mean MSE (alpha = 0.1, $\lambda$ = 0)]{{\includegraphics[width=3.5cm]{linear regression/l2/losses_train_l2_lr_0.1_lmd_0.jpg} }}%
-\subfloat[\centering The learning curve of the validation MAE (alpha = 0.1, $\lambda$ = 0)]{{\includegraphics[width=3.5cm]{linear regression/l2/valid_l2_lr_0.1_lmd_0.jpg} }}%
-\caption{Learning curve of training and validation for learning rate step-decay}%
-\label{fig:example}%
-\end{figure}
+- I found an initial learning rate (alpha) of 0.1 to produce the lowest test risk of 7.6947923. Below are a few figures from decay tuning.
 
-\subsection\*{Neural Net Regression}
+<figure align="center" display= "inline-block"
+    margin= "20px">
+  <img vertical-align= "top" width= "30%" src="linear regression/decay/losses_train_decay_lr_0.1.jpg" hspace="10" />
+  <figcaption text-align= "center">The learning curve of the validation MAE (alpha = 0.1)</figcaption>
+  </figure>
+  
+  <figure align="center" display= "inline-block"
+    margin= "20px">
+  <img vertical-align= "top" width= "30%" src="linear regression/decay/valid_decay_lr_0.1.jpg">
+  <figcaption text-align= "center">The learning curve of the validation MAE (alpha = 0.1)</figcaption>
+</figure>
+
+<figure align="center" display= "inline-block"
+    margin= "20px">
+  <img vertical-align= "top" width= "30%" src="linear regression/decay/losses_train_decay_lr_0.001.jpg" hspace="10" />
+  <figcaption text-align= "center">The learning curve of the training MSE (alpha = 0.001)</figcaption>
+  </figure>
+  
+  <figure align="center" display= "inline-block"
+    margin= "20px">
+  <img vertical-align= "top" width= "30%" src="linear regression/decay/valid_decay_lr_0.001.jpg">
+  <figcaption text-align= "center">The learning curve of the validation MAE (alpha = 0.001)</figcaption>
+</figure>
+
+<b><p align="center">Learning curve of training and validation for learning rate step-decay<p></b>
+
+### Neural Net Regression
 
 After tuning I found the best model to have a dropout layer of 0.3 and a RMSProp optimizer with He uniform weight initializer kernel. The lowest test risk it produced was 5.9898529052734375.
 
-\subsubsection\*{Optimizers}
+#### Optimizers
 
-\begin{enumerate}
+- For an Adam optimizer with an initial learning rate of 0.01, I found a test risk of 7.744905948638916. Below are figures from Adam optimizer.
+- For an RMSProp optimizer (and He Uniform weight initializer kernel), I found the lowest test risk of 5.9898529052734375. Below are figures from RMSProp optimizer.
+<figure align="center" display= "inline-block"
+    margin= "20px">
+  <img vertical-align= "top" width= "30%" src="nn/neural_network_train_adam_drop_0.3.jpg" hspace="10" />
+  <figcaption text-align= "center">The learning curve of the training MSE (Adam optimizer)</figcaption>
+  </figure>
+  
+  <figure align="center" display= "inline-block"
+    margin= "20px">
+  <img vertical-align= "top" width= "30%" src="nn/neural_network_val_adam_drop_0.3.jpg">
+  <figcaption text-align= "center">The learning curve of the validation MAE (Adam optimizer)</figcaption>
+</figure>
 
-\item For an Adam optimizer with an initial learning rate of 0.01, I found a test risk of 7.744905948638916. Below are figures from Adam optimizer.
-\item For an RMSProp optimizer (and He Uniform weight initializer kernel), I found the lowest test risk of 5.9898529052734375. Below are figures from RMSProp optimizer.
-\end{enumerate}
-\begin{figure}[H]%
-\centering
-\subfloat[\centering The learning curve of the training MSE (Adam optimizer)]{{\includegraphics[width=3.5cm]{nn/neural_network_train_adam_drop_0.3.jpg} }}%
-\subfloat[\centering The learning curve of the validation MAE (Adam optimizer)]{{\includegraphics[width=3.5cm]{nn/neural_network_val_adam_drop_0.3.jpg} }}%
-\qquad
-\subfloat[\centering The learning curve of the training MSE (RMSProp optimizer)]{{\includegraphics[width=3.5cm]{nn/neural_network_train_rms_drop_0.3.jpg} }}%
-\subfloat[\centering The learning curve of the validation MAE (RMSProp optimizer)]{{\includegraphics[width=3.5cm]{nn/neural_network_val_rms_0.3.jpg} }}%
-\caption{Learning curve of training and validation for Adam and RMSProp optimzers}%
-\label{fig:example}%
-\end{figure}
+<figure align="center" display= "inline-block"
+    margin= "20px">
+  <img vertical-align= "top" width= "30%" src="nn/neural_network_train_rms_drop_0.3.jpg" hspace="10" />
+  <figcaption text-align= "center">The learning curve of the training MSE (RMSProp optimizer)</figcaption>
+  </figure>
+  
+  <figure align="center" display= "inline-block"
+    margin= "20px">
+  <img vertical-align= "top" width= "30%" src="nn/neural_network_val_rms_0.3.jpg">
+  <figcaption text-align= "center">The learning curve of the validation MAE (RMSProp optimizer)</figcaption>
+</figure>
 
-\subsubsection\*{Weight Initializer Kernels}
+<b><p align="center">Learning curve of training and validation for Adam and RMSProp optimzers<p></b>
 
-\begin{enumerate}
+#### Weight Initializer Kernels
 
-\item For a normal, Gaussian weight initialization kernel, I found a test risk of 7.744905948638916. Below are learning curves.
-\item For HE Uniform weight initialization kernel, I found the test risk of 5.9898529052734375. Figures can be found in figure 4.0 for the RMSProp optimizer.
-\end{enumerate}
-\begin{figure}[H]%
-\centering
-\subfloat[\centering The learning curve of the training MSE (normal kernel)]{{\includegraphics[width=3.5cm]{nn/neural_network_train_adam_drop_0.3.jpg} }}%
-\subfloat[\centering The learning curve of the validation MAE (normal kernel)]{{\includegraphics[width=3.5cm]{nn/neural_network_val_adam_drop_0.3.jpg} }}%
-\caption{Learning curve of training and validation for normal weight initialization}%
-\label{fig:example}%
-\end{figure}
+- For a normal, Gaussian weight initialization kernel, I found a test risk of 7.744905948638916. Below are learning curves.
+- For HE Uniform weight initialization kernel, I found the test risk of 5.9898529052734375. Figures can be found in figure 4.0 for the RMSProp optimizer.
 
-\subsubsection\*{Dropout}
+<figure align="center" display= "inline-block"
+    margin= "20px">
+  <img vertical-align= "top" width= "30%" src="nn/neural_network_train_adam_drop_0.3.jpg" hspace="10" />
+  <figcaption text-align= "center">The learning curve of the training MSE (normal kernel)</figcaption>
+  </figure>
+  
+  <figure align="center" display= "inline-block"
+    margin= "20px">
+  <img vertical-align= "top" width= "30%" src="nn/neural_network_val_adam_drop_0.3.jpg">
+  <figcaption text-align= "center">The learning curve of the validation MAE (normal kernel)</figcaption>
+</figure>
 
-\begin{enumerate}
+#### Dropout
 
-\item I found a dropout rate of 0.3 to produce the lowest test risk of . Figure for rate 0.3 can be found in figure 4.0 for RMSProp optimizer. Below a few figures of tuning canbe found.
-\end{enumerate}
-\begin{figure}[H]%
-\centering
-\subfloat[\centering The learning curve of the training MSE (dropout 0.6)]{{\includegraphics[width=3.5cm]{nn/neural_network_train_drop_0.6.jpg} }}%
-\subfloat[\centering The learning curve of the validation MAE (dropout 0.6)]{{\includegraphics[width=3.5cm]{nn/neural_network_val_drop_0.6.jpg} }}%
-\caption{Learning curve of training and validation for a dropout rate of 0.6}%
-\label{fig:example}%
-\end{figure}
+- I found a dropout rate of 0.3 to produce the lowest test risk of . Figure for rate 0.3 can be found in figure 4.0 for RMSProp optimizer. Below a few figures of tuning canbe found.
 
-\subsection*{SVM Machine}
+<figure align="center" display= "inline-block"
+    margin= "20px">
+  <img vertical-align= "top" width= "30%" src="nn/neural_network_train_drop_0.6.jpg" hspace="10" />
+  <figcaption text-align= "center">The learning curve of the training MSE (dropout 0.6)</figcaption>
+  </figure>
+
+  <figure align="center" display= "inline-block"
+    margin= "20px">
+  <img vertical-align= "top" width= "30%" src="nn/neural_network_val_drop_0.6.jpg" hspace="10" />
+  <figcaption text-align= "center">The learning curve of the validation MAE (dropout 0.6)</figcaption>
+  </figure>
+
+### SVM Machine
+
 I found linear kernel to produce the lowest test risk of 7.778022035132583.
-\section*{Conclusion}
+
+## **Conclusion**
 
 After experimenting with the three different machine learning models, I found using a neural network to produce the lowest risk I am able to get of 5.9898529052734375. I found the neural net to be the most memory intensive while the SVM was the least
 
-\section\*{References}
+## **References**
 
 R, Srivignesh. “A Walk-through of Regression Analysis Using Artificial Neural Networks in Tensorflow.” Analytics Vidhya, August 16, 2021, \url{https://www.analyticsvidhya.com/blog/2021/08/a-walk-through-of-regression-analysis-using-artificial-neural-networks-in-tensorflow/}.
 
@@ -160,5 +214,3 @@ R, Srivignesh. “A Walk-through of Regression Analysis Using Artificial Neural 
 R, Srivignesh. “A Walk-through of Regression Analysis Using Artificial Neural Networks in Tensorflow.” Analytics Vidhya, March 27, 2021, \url{https://www.analyticsvidhya.com/blog/2020/03/support-vector-regression-tutorial-for-machine-learning/}.
 
 Versloot, Christian. “How To Perform Multioutput Regression With Svms In Python.” Feb 15, 2022, \url{https://github.com/christianversloot/machine-learning-articles/blob/main/how-to-perform-multioutput-regression-with-svms-in-python.md}.
-
-\end{document}

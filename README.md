@@ -30,7 +30,7 @@ I will use linear regression, neural net regression and support vector machine (
 For the training loss/ objective, I used mean square error (MSE). I manually defined the linear regression model but used sklearn.metrics for the mean absolute error (MAE). I used normalized data and targets for training (but denormalized it for risk). I normalized inputs using the formula: $\tilde{z} = \frac{z - mean(z)}{std(z)}$.
 
 I fixed parameters at a batch size of 32 and 100 epochs. I experimented with learning parameter decay, L1, and L2 regularization. \
- For the learning parameter's tuning, I loop over the set \{1e-1, 1e-2, 1e-3, 1e-4\} and for the $\lambda$ for regularization, I loop over the set \{0, 1e-1, 1e-2, 1e-3, 1e-4, 1e-5, 1e-6\}. \
+ For the learning parameter's tuning, I loop over the set \{1e-1, 5e-1, 1e-2, 1e-3, 1e-4\} and for the $\lambda$ for regularization, I loop over the set \{0, 1e-1, 1e-2, 1e-3, 1e-4, 1e-5, 1e-6\}. \
  For learning parameter decay, I used step-decay, where I halve the rate every 10 epochs.
 
 ### Neural Net Regression

@@ -8,14 +8,15 @@
 
 .image {
   display: block;
-  width: 30%;
+  width: 40%;
+  
 }
 
 .word {
   display: block;
   width: 100%;
   text-align: center;
-  background: #793636;
+  font-size: 8pt;
 }
 
 .photo-list {
@@ -23,4 +24,3 @@
   flex-direction: row;
   justify-content: space-evenly;
 }
-

@@ -61,13 +61,14 @@ I fixed alpha, then for each alpha in the set, I fix a $\lambda$ then get the te
 
 <div class="photo-list">
   <div class="photos">
-  <img width= "30%" src="linear regression/l1/losses_train_l1_lr_0.01_lmd_0.0001.jpg" hspace="10" />
+  <img class="image" src="linear regression/l1/losses_train_l1_lr_0.01_lmd_0.0001.jpg" hspace="20"/>
   <span class="word">The learning curve of the validation MAE (alpha = 0.01, &lambda; = 0.0001)</span>
   </div>
   
   <div class="photos">
-  <img vertical-align= "top" width= "30%" src="linear regression/l1/valid_l1_lr_0.01_lmd_0.0001.jpg">
+  <img class="image" src="linear regression/l1/valid_l1_lr_0.01_lmd_0.0001.jpg">
   <span class="word">The learning curve of the validation MAE (alpha = 0.01, &lambda; = 0.0001)</span>
+  </div>
 </div>
 
 <figure align="center" display= "inline-block"

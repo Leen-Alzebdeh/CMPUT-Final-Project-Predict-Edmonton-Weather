@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="style.css">
-
 ### CMPUT 466/566 Final Project Report (2023)
 
 ### Author: Leen Alzebdeh
@@ -50,7 +48,7 @@ Another method I experimented with is SVM, as it works effectively in cases wher
 
 ### Linear Regression
 
-The results of tuning concluded the best model is with no L1 or L2 reguralization and no decay. I found the best test risk to be 7.654087.
+The results of tuning concluded the best model is one with learning rate step decay, where the initial rate is 0.5 and the rate reduces by half every 10 epochs. I found the best test risk to be 7.615133
 
 ### Regularization
 
@@ -115,7 +113,19 @@ I fixed alpha, then for each alpha in the set, I fix a $\lambda$ then get the te
 
 I experimented with a few initial learning rates. After experimenting with different factors, I decided on a factor of 0.5 every 10 epochs. Thus every 10 epochs, the learning rate decreases by half.
 
-- I found an initial learning rate (alpha) of 0.1 to produce the lowest test risk of 7.6947923. Below are a few figures from decay tuning.
+- I found an initial learning rate (alpha) of 0.5 to produce the lowest test risk of 7.615133. Below are a few figures from decay tuning.
+
+<figure align="center" display= "inline-block"
+    margin= "20px">
+  <img vertical-align= "top" width= "40%" src="linear regression/decay/losses_train_decay_lr_0.5.jpg" hspace="10" />
+  <figcaption text-align= "center">The learning curve of the training MSE (alpha = 0.5)</figcaption>
+  </figure>
+  
+  <figure align="center" display= "inline-block"
+    margin= "20px">
+  <img vertical-align= "top" width= "40%" src="linear regression/decay/valid_decay_lr_0.5.jpg">
+  <figcaption text-align= "center">The learning curve of the validation MAE (alpha = 0.5)</figcaption>
+</figure>
 
 <figure align="center" display= "inline-block"
     margin= "20px">
@@ -127,18 +137,6 @@ I experimented with a few initial learning rates. After experimenting with diffe
     margin= "20px">
   <img vertical-align= "top" width= "40%" src="linear regression/decay/valid_decay_lr_0.1.jpg">
   <figcaption text-align= "center">The learning curve of the validation MAE (alpha = 0.1)</figcaption>
-</figure>
-
-<figure align="center" display= "inline-block"
-    margin= "20px">
-  <img vertical-align= "top" width= "40%" src="linear regression/decay/losses_train_decay_lr_0.001.jpg" hspace="10" />
-  <figcaption text-align= "center">The learning curve of the training MSE (alpha = 0.001)</figcaption>
-  </figure>
-  
-  <figure align="center" display= "inline-block"
-    margin= "20px">
-  <img vertical-align= "top" width= "40%" src="linear regression/decay/valid_decay_lr_0.001.jpg">
-  <figcaption text-align= "center">The learning curve of the validation MAE (alpha = 0.001)</figcaption>
 </figure>
 
 <b><p align="center">Learning curve of training and validation for learning rate step-decay<p></b>
@@ -220,12 +218,12 @@ After experimenting with the three different machine learning models, I found us
 
 ## **References**
 
-R, Srivignesh. “A Walk-through of Regression Analysis Using Artificial Neural Networks in Tensorflow.” Analytics Vidhya, August 16, 2021, \url{https://www.analyticsvidhya.com/blog/2021/08/a-walk-through-of-regression-analysis-using-artificial-neural-networks-in-tensorflow/}.
+R, Srivignesh. “A Walk-through of Regression Analysis Using Artificial Neural Networks in Tensorflow.” Analytics Vidhya, August 16, 2021, [https://www.analyticsvidhya.com/blog/2021/08/a-walk-through-of-regression-analysis-using-artificial-neural-networks-in-tensorflow/](https://www.analyticsvidhya.com/blog/2021/08/a-walk-through-of-regression-analysis-using-artificial-neural-networks-in-tensorflow/).
 
-“Training and evaluation with the built-in methods.” TensorFlow, Jan 10, 2022, \url{https://www.tensorflow.org/guide/keras/train_and_evaluate}.
+“Training and evaluation with the built-in methods.” TensorFlow, Jan 10, 2022, [https://www.tensorflow.org/guide/keras/train_and_evaluate](https://www.tensorflow.org/guide/keras/train_and_evaluate).
 
-“Machine Learning Models.” MathWorks, \url{https://www.mathworks.com/discovery/machine-learning-models}.
+“Machine Learning Models.” MathWorks, [https://www.mathworks.com/discovery/machine-learning-models](https://www.mathworks.com/discovery/machine-learning-models).
 
-R, Srivignesh. “A Walk-through of Regression Analysis Using Artificial Neural Networks in Tensorflow.” Analytics Vidhya, March 27, 2021, \url{https://www.analyticsvidhya.com/blog/2020/03/support-vector-regression-tutorial-for-machine-learning/}.
+R, Srivignesh. “A Walk-through of Regression Analysis Using Artificial Neural Networks in Tensorflow.” Analytics Vidhya, March 27, 2021, [https://www.analyticsvidhya.com/blog/2020/03/support-vector-regression-tutorial-for-machine-learning/](https://www.analyticsvidhya.com/blog/2020/03/support-vector-regression-tutorial-for-machine-learning/).
 
-Versloot, Christian. “How To Perform Multioutput Regression With Svms In Python.” Feb 15, 2022, \url{https://github.com/christianversloot/machine-learning-articles/blob/main/how-to-perform-multioutput-regression-with-svms-in-python.md}.
+Versloot, Christian. “How To Perform Multioutput Regression With Svms In Python.” Feb 15, 2022, [https://github.com/christianversloot/machine-learning-articles/blob/main/how-to-perform-multioutput-regression-with-svms-in-python.m](https://github.com/christianversloot/machine-learning-articles/blob/main/how-to-perform-multioutput-regression-with-svms-in-python.m).

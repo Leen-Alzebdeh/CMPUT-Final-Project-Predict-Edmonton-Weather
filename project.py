@@ -137,8 +137,8 @@ def linear_regression_train(X_train, y_train, X_val, t_val):
     epoch_best = 0
 
     for epoch in range(MaxEpoch):
-        # lr = alpha * math.pow(0.5,  math.floor((1+epoch)/10))
-        lr = alpha
+        lr = alphas[0] * math.pow(0.5,  math.floor((1+epoch)/20))
+        #lr = alpha
         loss_this_epoch = 0
         for b in range(int(np.ceil(N_train/batch_size))):
             X_batch = X_train[b*batch_size: (b+1)*batch_size, :] 
@@ -186,14 +186,14 @@ def linear_regression_test(X_test, t_test, W_best, train_losses, valid_risk):
   plt.title('Training loss')
   plt.ylabel('loss')
   plt.xlabel('epochs')
-  plt.savefig('losses_train_l2_lr_{}_lmd_{}.jpg'.format(alpha, lamda))
+  plt.savefig('losses_train_decay_lr_{}.jpg'.format(alpha))
 
   plt.figure()
   plt.plot(range(MaxEpoch),valid_risk, color="red")
   plt.title('validation risk')
   plt.ylabel('risk')
   plt.xlabel('epochs')
-  plt.savefig('valid_l2_lr_{}_lmd_{}.jpg'.format(alpha,lamda))
+  plt.savefig('valid_decay_lr_{}.jpg'.format(alpha))
 
   _, _, _, risk_test = linear_regression_predict(X_test, W_best, t_test)
   print("Best test risk", risk_test)
@@ -310,20 +310,21 @@ X_train, t_train, X_val, t_val, X_test, t_test = readData()
 print(X_train.shape, t_train.shape, X_val.shape,
       t_val.shape, X_test.shape, t_test.shape)
 
-alphas = [1e-1, 1e-2, 1e-3, 1e-4]      # learning rate
+alphas = [5e-1,1e-1, 1e-2, 1e-3, 1e-4]      # learning rate
 batch_size = 16    # batch size
 MaxEpoch = 100       # Maximum epoch
 lambdas = [0, 1e-1, 1e-2, 1e-3, 1e-4, 1e-5, 1e-6]         # weight decay
 alpha = None
-lamda = None
+lamda = 0
 risks = 1000
 best_lambda = None
+
 best_alpha = None
 
 # linear regression
 epoch_best, acc_best,  W_best, train_losses, valid_accs = linear_regression_train(X_train, t_train, X_val, t_val)
 
 
-rnn_predict(X_train, t_train, X_val, t_val, X_test, t_test)
+# rnn_predict(X_train, t_train, X_val, t_val, X_test, t_test)
 
-svr_regression_predit(X_train, t_train, X_val, t_val, X_test, t_test)
+# svr_regression_predit(X_train, t_train, X_val, t_val, X_test, t_test)

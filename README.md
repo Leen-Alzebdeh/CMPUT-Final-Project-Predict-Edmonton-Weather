@@ -162,7 +162,7 @@ After tuning I found the best model to have a dropout layer of 0.3 and a RMSProp
   <figcaption text-align= "center">The learning curve of the validation MAE (Adam optimizer)</figcaption>
 </figure>
 
-<b><p align="center">Figure 4.0: Learning curve of training and validation for Adam optimzer<p></b>
+<b><p align="center">Figure 4.0: Learning curve of training and validation for Adam optimzer (using a He uniform weight initializer kernel and a dropout of 0.3)<p></b>
 
 <figure align="center" display= "inline-block"
     margin= "20px">
@@ -176,7 +176,7 @@ After tuning I found the best model to have a dropout layer of 0.3 and a RMSProp
   <figcaption text-align= "center">The learning curve of the validation MAE (RMSProp optimizer)</figcaption>
 </figure>
 
-<b><p align="center">Figure 5.0: Learning curve of training and validation for RMSProp optimzer<p></b>
+<b><p align="center">Figure 5.0: Learning curve of training and validation for RMSProp optimzer (using a He uniform weight initializer kernel and a dropout of 0.3) <p></b>
 
 #### Weight Initializer Kernels
 

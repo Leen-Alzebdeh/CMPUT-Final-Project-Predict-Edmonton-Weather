@@ -93,7 +93,7 @@ I fixed alpha, then for each alpha in the set, I fix a $\lambda$ then get the te
   flex-direction: column;
   align-items: center;">
     <img style="display: block;
-  width: 40%;" src="linear regression/l1/losses_train_l1_lr_0.01_lmd_0.0001.jpg" hspace="20"/>
+  width: 30%;" src="linear regression/l1/losses_train_l1_lr_0.01_lmd_0.0001.jpg" hspace="20"/>
     <span style="display: block;
   width: 100%;
   text-align: center;
@@ -105,7 +105,7 @@ I fixed alpha, then for each alpha in the set, I fix a $\lambda$ then get the te
   flex-direction: column;
   align-items: center;">
     <img style="display: block;
-  width: 40%;"  src="linear regression/l1/valid_l1_lr_0.01_lmd_0.0001.jpg">
+  width: 30%;"  src="linear regression/l1/valid_l1_lr_0.01_lmd_0.0001.jpg">
     <span style="display: block;
   width: 100%;
   text-align: center;

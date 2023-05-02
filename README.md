@@ -85,10 +85,19 @@ I fixed alpha, then for each alpha in the set, I fix a $\lambda$ then get the te
 - For L1 regularization, I found a learning rate (alpha) of 0.0001 and a $\lambda$ of 0.1 to produce the lowest test risk of 7.775. Below are a few figures from L1 tuning.
 - For L2 regularization, I found a learning rate of 0.0001 and a $\lambda$ of 0 (no L2 term) to produce the lowest test risk of 7.654087. Below are a few figures from L2 tuning.
 
-<div class="photo-list">
-  <div class="photos">
-    <img class="image" src="linear regression/l1/losses_train_l1_lr_0.01_lmd_0.0001.jpg" hspace="20"/>
-    <span class="word">The learning curve of the validation MAE (alpha = 0.01, &lambda; = 0.0001)</span>
+<div style="display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;">
+  <div style="display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;">
+    <img style="display: block;
+  width: 40%;" src="linear regression/l1/losses_train_l1_lr_0.01_lmd_0.0001.jpg" hspace="20"/>
+    <span style="display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 8pt;">The learning curve of the validation MAE (alpha = 0.01, &lambda; = 0.0001)</span>
   </div>
   
   <div class="photos">

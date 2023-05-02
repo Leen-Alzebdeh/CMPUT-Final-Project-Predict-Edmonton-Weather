@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="style.css">
+
 ### CMPUT 466/566 Final Project Report (2023)
 
 ### Author: Leen Alzebdeh
@@ -57,17 +59,16 @@ I fixed alpha, then for each alpha in the set, I fix a $\lambda$ then get the te
 - For L1 regularization, I found a learning rate (alpha) of 0.0001 and a $\lambda$ of 0.1 to produce the lowest test risk of 7.775. Below are a few figures from L1 tuning.
 - For L2 regularization, I found a learning rate of 0.0001 and a $\lambda$ of 0 (no L2 term) to produce the lowest test risk of 7.654087. Below are a few figures from L2 tuning.
 
-<figure align="center" display= "inline-block"
-    margin= "20px">
-  <img vertical-align= "top" width= "30%" src="linear regression/l1/losses_train_l1_lr_0.01_lmd_0.0001.jpg" hspace="10" />
-  <figcaption text-align= "center">The learning curve of the validation MAE (alpha = 0.01, &lambda; = 0.0001)</figcaption>
-  </figure>
+<div class="photo-list">
+  <div class="photos">
+  <img width= "30%" src="linear regression/l1/losses_train_l1_lr_0.01_lmd_0.0001.jpg" hspace="10" />
+  <span class="word">The learning curve of the validation MAE (alpha = 0.01, &lambda; = 0.0001)</span>
+  </div>
   
-  <figure align="center" display= "inline-block"
-    margin= "20px">
+  <div class="photos">
   <img vertical-align= "top" width= "30%" src="linear regression/l1/valid_l1_lr_0.01_lmd_0.0001.jpg">
-  <figcaption text-align= "center">The learning curve of the validation MAE (alpha = 0.01, &lambda; = 0.0001)</figcaption>
-</figure>
+  <span class="word">The learning curve of the validation MAE (alpha = 0.01, &lambda; = 0.0001)</span>
+</div>
 
 <figure align="center" display= "inline-block"
     margin= "20px">

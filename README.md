@@ -1,30 +1,4 @@
-<style>
-.photos {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  background: #fafafa;
-}
-
-.image {
-  display: block;
-  width: 40%;
-  
-}
-
-.word {
-  display: block;
-  width: 100%;
-  text-align: center;
-  font-size: 8pt;
-}
-
-.photo-list {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}</style>
+<link rel="stylesheet" href="style.css">
 
 ### CMPUT 466/566 Final Project Report (2023)
 
@@ -85,45 +59,29 @@ I fixed alpha, then for each alpha in the set, I fix a $\lambda$ then get the te
 - For L1 regularization, I found a learning rate (alpha) of 0.0001 and a $\lambda$ of 0.1 to produce the lowest test risk of 7.775. Below are a few figures from L1 tuning.
 - For L2 regularization, I found a learning rate of 0.0001 and a $\lambda$ of 0 (no L2 term) to produce the lowest test risk of 7.654087. Below are a few figures from L2 tuning.
 
-<div style="display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;">
-  <div style="display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;">
-    <img style="display: block;
-  width: 30%;" src="linear regression/l1/losses_train_l1_lr_0.01_lmd_0.0001.jpg" hspace="20"/>
-    <span style="display: block;
-  width: 30%;
-  text-align: center;
-  font-size: 8pt;">The learning curve of the validation MAE (alpha = 0.01, &lambda; = 0.0001)</span>
-  </div>
+<figure align="center" display= "inline-block"
+    margin= "20px">
+  <img  vertical-align= "top" width= "30%"  src="linear regression/l1/losses_train_l1_lr_0.01_lmd_0.0001.jpg" hspace="20"/>
+  <figcaption text-align= "center">The learning curve of the validation MAE (alpha = 0.01, &lambda; = 0.0001)</figcaption>
+  </figure>
   
-  <div style="display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;">
-    <img style="display: block;
-  width: 30%;"  src="linear regression/l1/valid_l1_lr_0.01_lmd_0.0001.jpg">
-    <span style="display: block;
-  width: 30%;
-  text-align: center;
-  font-size: 8pt;">The learning curve of the validation MAE (alpha = 0.01, &lambda; = 0.0001)</span>
-  </div>
-  </div>
+<figure align="center" display= "inline-block"
+    margin= "20px">  
+    <img  vertical-align= "top" width= "30%"  src="linear regression/l1/valid_l1_lr_0.01_lmd_0.0001.jpg">
+  <figcaption text-align= "center">The learning curve of the validation MAE (alpha = 0.01, &lambda; = 0.0001)</figcaption>
+  </figure>
+
+<figure align="center" display= "inline-block"
+    margin= "20px">
+  <img vertical-align= "top" width= "30%" src="linear regression/l1/losses_train_l1_lr_0.0001_lmd_0.1.jpg" hspace="10" />
+  <figcaption text-align= "center">The learning curve of the training MSE (alpha = 0.0001, &lambda; = 0.1)</figcaption>
+  </figure>
   
-<div class="photo-list">
-  <div class="photos">
-    <img class="image" src="linear regression/l1/losses_train_l1_lr_0.0001_lmd_0.1.jpg" hspace="10" />
-    <span class="word">The learning curve of the training MSE (alpha = 0.0001, &lambda; = 0.1)</span>
-  </div>
-  
-  <div class="photos">
-    <img class="image" src="linear regression/l1/valid_l1_lr_0.0001_lmd_0.1.jpg">
-  <span>The learning curve of the validation MAE (alpha = 0.0001, &lambda; = 0.1)</span>
-  </div>
-</div>
+  <figure align="center" display= "inline-block"
+    margin= "20px">
+  <img vertical-align= "top" width= "30%" src="linear regression/l1/valid_l1_lr_0.0001_lmd_0.1.jpg">
+  <figcaption text-align= "center">The learning curve of the validation MAE (alpha = 0.0001, &lambda; = 0.1)</figcaption>
+</figure>
 
 <b><p align="center">Learning curve of training and validation for L1 Regularization<p></b>
 

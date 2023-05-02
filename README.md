@@ -100,9 +100,16 @@ I fixed alpha, then for each alpha in the set, I fix a $\lambda$ then get the te
   font-size: 8pt;">The learning curve of the validation MAE (alpha = 0.01, &lambda; = 0.0001)</span>
   </div>
   
-  <div class="photos">
-    <img class="image" src="linear regression/l1/valid_l1_lr_0.01_lmd_0.0001.jpg">
-    <span class="word">The learning curve of the validation MAE (alpha = 0.01, &lambda; = 0.0001)</span>
+  <div style="display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;">
+    <img style="display: block;
+  width: 40%;"  src="linear regression/l1/valid_l1_lr_0.01_lmd_0.0001.jpg">
+    <span style="display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 8pt;">The learning curve of the validation MAE (alpha = 0.01, &lambda; = 0.0001)</span>
   </div>
   </div>
   

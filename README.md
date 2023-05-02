@@ -162,6 +162,8 @@ After tuning I found the best model to have a dropout layer of 0.3 and a RMSProp
   <figcaption text-align= "center">The learning curve of the validation MAE (Adam optimizer)</figcaption>
 </figure>
 
+<b><p align="center">Figure 4.0: Learning curve of training and validation for Adam optimzer<p></b>
+
 <figure align="center" display= "inline-block"
     margin= "20px">
   <img vertical-align= "top" width= "40%" src="nn/neural_network_train_rms_drop_0.3.jpg" hspace="10" />
@@ -174,12 +176,12 @@ After tuning I found the best model to have a dropout layer of 0.3 and a RMSProp
   <figcaption text-align= "center">The learning curve of the validation MAE (RMSProp optimizer)</figcaption>
 </figure>
 
-<b><p align="center">Figure 4.0: Learning curve of training and validation for Adam and RMSProp optimzers<p></b>
+<b><p align="center">Figure 5.0: Learning curve of training and validation for RMSProp optimzer<p></b>
 
 #### Weight Initializer Kernels
 
 - For a normal, Gaussian weight initialization kernel, I found a test risk of 7.744905948638916. Below are learning curves.
-- For HE Uniform weight initialization kernel, I found the test risk of 5.9898529052734375. Figures can be found in figure 4.0 for the RMSProp optimizer.
+- For HE Uniform weight initialization kernel, I found the test risk of 5.9898529052734375. Figures can be found in figure 5.0 for He Uniform.
 
 <figure align="center" display= "inline-block"
     margin= "20px">
@@ -193,9 +195,11 @@ After tuning I found the best model to have a dropout layer of 0.3 and a RMSProp
   <figcaption text-align= "center">The learning curve of the validation MAE (normal kernel)</figcaption>
 </figure>
 
+<b><p align="center">Figure 5.0: Learning curve of training and validation for normal weight initializer kernel<p></b>
+
 #### Dropout
 
-- I found a dropout rate of 0.3 to produce the lowest test risk of . Figure for rate 0.3 can be found in figure 4.0 for RMSProp optimizer. Below a few figures of tuning.
+- I found a dropout rate of 0.3 to produce the lowest test risk of . Figure for rate 0.3 can be found in figure 5.0. Below a few figures of tuning.
 
 <figure align="center" display= "inline-block"
     margin= "20px">
@@ -208,6 +212,8 @@ After tuning I found the best model to have a dropout layer of 0.3 and a RMSProp
   <img vertical-align= "top" width= "40%" src="nn/neural_network_val_drop_0.6.jpg" hspace="10" />
   <figcaption text-align= "center">The learning curve of the validation MAE (dropout 0.6)</figcaption>
   </figure>
+
+<b><p align="center">Figure 5.0: Learning curve of training and validation for dropout of 0.6<p></b>
 
 ### SVM Machine
 

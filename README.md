@@ -35,7 +35,7 @@ I fixed parameters at a batch size of 32 and 100 epochs. I experimented with lea
 
 ### Neural Net Regression
 
-While linear regression is limited to only learn the linear relationship between the features and targets. To better model the problem, we can learn the non-linear relationship between the features and target, using neural networks, which utilize a non-linear activation function in each layer.
+While linear regression is limited to only learn the linear relationship between the features and targets. To better model the problem, we can learn the non-linear relationship between the features and target using neural networks, which utilize a non-linear activation function in each layer.
 
 I fixed parameters at a batch size of 64, and 50 epochs. I use three densely connected layers, with ReLu activation and a dropout. The last layer is a dense layer with output unit size of 4. I tune the dropout rate by looping over the set \{0.3, 0.4, 0.5, 0.6, 0.7, 0.8\} and I experiment with different weight initialization kernels: random, normal Gaussian and He uniform initialization, in addition to two optimizers: Adam with learning rate 0.01, and a RMSProp.
 
@@ -55,7 +55,6 @@ The results of tuning concluded the best model is one with learning rate step de
 I fixed alpha, then for each alpha in the set, I fix a $\lambda$ then get the test risk. I found the best result, at 7.654087, to come from having no regularization term.
 
 - For L1 regularization, I found a learning rate (alpha) of 0.0001 and a $\lambda$ of 0.1 to produce the lowest test risk of 7.775. Below are a few figures from L1 tuning.
-- For L2 regularization, I found a learning rate of 0.0001 and a $\lambda$ of 0 (no L2 term) to produce the lowest test risk of 7.654087. Below are a few figures from L2 tuning.
 
 <figure align="center" display= "inline-block"
     margin= "20px">
@@ -81,7 +80,9 @@ I fixed alpha, then for each alpha in the set, I fix a $\lambda$ then get the te
   <figcaption text-align= "center">The learning curve of the validation MAE (alpha = 0.0001, &lambda; = 0.1)</figcaption>
 </figure>
 
-<b><p align="center">Learning curve of training and validation for L1 Regularization<p></b>
+<b><p align="center">Figure 1.0: Learning curve of training and validation for L1 Regularization<p></b>
+
+- For L2 regularization, I found a learning rate of 0.0001 and a $\lambda$ of 0 (no L2 term) to produce the lowest test risk of 7.654087. Below are a few figures from L2 tuning.
 
 <figure align="center" display= "inline-block"
     margin= "20px">
@@ -107,7 +108,7 @@ I fixed alpha, then for each alpha in the set, I fix a $\lambda$ then get the te
   <figcaption text-align= "center">The learning curve of the validation MAE (alpha = 0.1, &lambda; = 0)</figcaption>
 </figure>
 
-<b><p align="center">Learning curve of training and validation for L1 Regularization<p></b>
+<b><p align="center">Figure 2.0: Learning curve of training and validation for L2 Regularization<p></b>
 
 ### Step Decay
 
@@ -139,7 +140,7 @@ I experimented with a few initial learning rates. After experimenting with diffe
   <figcaption text-align= "center">The learning curve of the validation MAE (alpha = 0.1)</figcaption>
 </figure>
 
-<b><p align="center">Learning curve of training and validation for learning rate step-decay<p></b>
+<b><p align="center">Figure 3.0: Learning curve of training and validation for learning rate step-decay<p></b>
 
 ### Neural Net Regression
 
@@ -173,7 +174,7 @@ After tuning I found the best model to have a dropout layer of 0.3 and a RMSProp
   <figcaption text-align= "center">The learning curve of the validation MAE (RMSProp optimizer)</figcaption>
 </figure>
 
-<b><p align="center">Learning curve of training and validation for Adam and RMSProp optimzers<p></b>
+<b><p align="center">Figure 4.0: Learning curve of training and validation for Adam and RMSProp optimzers<p></b>
 
 #### Weight Initializer Kernels
 
@@ -194,7 +195,7 @@ After tuning I found the best model to have a dropout layer of 0.3 and a RMSProp
 
 #### Dropout
 
-- I found a dropout rate of 0.3 to produce the lowest test risk of . Figure for rate 0.3 can be found in figure 4.0 for RMSProp optimizer. Below a few figures of tuning canbe found.
+- I found a dropout rate of 0.3 to produce the lowest test risk of . Figure for rate 0.3 can be found in figure 4.0 for RMSProp optimizer. Below a few figures of tuning.
 
 <figure align="center" display= "inline-block"
     margin= "20px">
@@ -210,7 +211,7 @@ After tuning I found the best model to have a dropout layer of 0.3 and a RMSProp
 
 ### SVM Machine
 
-I found linear kernel to produce the lowest test risk of 7.778022035132583.
+I found a linear kernel to produce the lowest test risk of 7.778022035132583.
 
 ## **Conclusion**
 

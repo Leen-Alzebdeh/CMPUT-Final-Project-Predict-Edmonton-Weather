@@ -137,8 +137,8 @@ def linear_regression_train(X_train, y_train, X_val, t_val):
     epoch_best = 0
 
     for epoch in range(MaxEpoch):
-        lr = alphas[0] * math.pow(0.5,  math.floor((1+epoch)/20))
-        #lr = alpha
+        #lr = alphas[0] * math.pow(0.5,  math.floor((1+epoch)/20))
+        lr = alphas[0]
         loss_this_epoch = 0
         for b in range(int(np.ceil(N_train/batch_size))):
             X_batch = X_train[b*batch_size: (b+1)*batch_size, :] 

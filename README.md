@@ -95,7 +95,7 @@ I fixed alpha, then for each alpha in the set, I fix a $\lambda$ then get the te
     <img style="display: block;
   width: 30%;" src="linear regression/l1/losses_train_l1_lr_0.01_lmd_0.0001.jpg" hspace="20"/>
     <span style="display: block;
-  width: 100%;
+  width: 30%;
   text-align: center;
   font-size: 8pt;">The learning curve of the validation MAE (alpha = 0.01, &lambda; = 0.0001)</span>
   </div>
@@ -107,7 +107,7 @@ I fixed alpha, then for each alpha in the set, I fix a $\lambda$ then get the te
     <img style="display: block;
   width: 30%;"  src="linear regression/l1/valid_l1_lr_0.01_lmd_0.0001.jpg">
     <span style="display: block;
-  width: 100%;
+  width: 30%;
   text-align: center;
   font-size: 8pt;">The learning curve of the validation MAE (alpha = 0.01, &lambda; = 0.0001)</span>
   </div>

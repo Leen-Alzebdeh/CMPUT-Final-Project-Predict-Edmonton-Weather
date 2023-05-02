@@ -195,7 +195,7 @@ After tuning I found the best model to have a dropout layer of 0.3 and a RMSProp
   <figcaption text-align= "center">The learning curve of the validation MAE (normal kernel)</figcaption>
 </figure>
 
-<b><p align="center">Figure 5.0: Learning curve of training and validation for normal weight initializer kernel<p></b>
+<b><p align="center">Figure 6.0: Learning curve of training and validation for normal weight initializer kernel<p></b>
 
 #### Dropout
 
@@ -213,7 +213,7 @@ After tuning I found the best model to have a dropout layer of 0.3 and a RMSProp
   <figcaption text-align= "center">The learning curve of the validation MAE (dropout 0.6)</figcaption>
   </figure>
 
-<b><p align="center">Figure 5.0: Learning curve of training and validation for dropout of 0.6<p></b>
+<b><p align="center">Figure 7.0: Learning curve of training and validation for dropout of 0.6<p></b>
 
 ### SVM Machine
 

@@ -1,8 +1,8 @@
-# CMPUT 466/566 Final Project Report
+## CMPUT 466/566 Final Project Report
 
-# Author: Leen Alzebdeh
+## Author: Leen Alzebdeh
 
-    ## Introduction
+## Introduction
 
     I will attempt to predict 4 attributes of Edmonton's weather - max temperature in C, min temperature in C, mean temperature in C, and total precipitation in meters - based on six features: day of the month, month of the year, weather monitoring station's latitude, station's longitude and station's elevation in meters.
 

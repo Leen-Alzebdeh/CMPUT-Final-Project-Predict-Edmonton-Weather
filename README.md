@@ -2,6 +2,8 @@
 
 ### Author: Leen Alzebdeh
 
+### Project page: [https://leen-alzebdeh.github.io/projects/466_final_project/](https://leen-alzebdeh.github.io/projects/466_final_project/)
+
 ## **Introduction**
 
 I will attempt to predict 4 attributes of Edmonton's weather:
